@@ -265,12 +265,3 @@ track ORDER BY RAND() LIMIT 10; =>
 SELECT artist_name, album_name FROM
 artist, album WHERE artist.artist_id=album.artist_id; => artist_name, album_name
 =================================================================================================================
-The column names are included in parentheses after the table name, and the values
-stored in those columns are listed in parentheses after the VALUES keyword. So, in this
-example, a new row is created and the value 7 is stored as the artist_id, 2 is stored as
-the album_id, and Oedipus Schmoedipus is stored as the album_name. The advantages of
-this syntax are that it’s readable and flexible (addressing the third disadvantage we
-described) and order-independent (addressing the first disadvantage). 
-The disadvantage is that you need to know the column names and type them in.
-This new syntax can also address the second disadvantage of the simpler approach—
-that is, it can allow you to insert values for only some columns.
